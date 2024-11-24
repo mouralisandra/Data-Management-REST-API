@@ -2,7 +2,7 @@
 FROM golang:1.23.3 AS builder
 
 WORKDIR /app
-COPY app/go.mod app/go.sum ./
+COPY ./go.mod ./go.sum ./main ./
 RUN go mod download
 RUN go mod tidy
 RUN go get github.com/gorilla/mux
@@ -15,7 +15,7 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
-COPY --from=builder /app/main .
+COPY --from=builder ./app/main .
 
 EXPOSE 8000
 
