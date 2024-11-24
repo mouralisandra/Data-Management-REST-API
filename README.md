@@ -28,13 +28,13 @@ DELETE localhost:8000/datas/{id}
 ### Create Data
 ``` bash
 POST localhost:8000/datas
-
-# Request sample
-# {
-#   "isbn":"4545454",
-#   "title":"Data Three",
-#   "author":{"firstname":"Harry",  "lastname":"White"}
-# }
+```
+```json
+{
+  "isbn":"4545454",
+  "title":"Data Three",
+  "author":{"firstname":"Harry",  "lastname":"White"}
+}
 ```
 
 ### Update Data
