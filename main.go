@@ -28,13 +28,13 @@ type Author struct {
 var datas []Data
 
 // Get all datas
-func getBooks(w http.ResponseWriter, r *http.Request) {
+func getDatas(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(datas)
 }
 
 // Get single data
-func getBook(w http.ResponseWriter, r *http.Request) {
+func getData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r) // Gets params
 	// Loop through datas and find one with the id from the params
@@ -48,7 +48,7 @@ func getBook(w http.ResponseWriter, r *http.Request) {
 }
 
 // Add new data
-func createBook(w http.ResponseWriter, r *http.Request) {
+func createData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var data Data
 	_ = json.NewDecoder(r.Body).Decode(&data)
@@ -58,7 +58,7 @@ func createBook(w http.ResponseWriter, r *http.Request) {
 }
 
 // Update data
-func updateBook(w http.ResponseWriter, r *http.Request) {
+func updateData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
 	for index, item := range datas {
@@ -75,7 +75,7 @@ func updateBook(w http.ResponseWriter, r *http.Request) {
 }
 
 // Delete data
-func deleteBook(w http.ResponseWriter, r *http.Request) {
+func deleteData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
 	for index, item := range datas {
@@ -97,11 +97,11 @@ func main() {
 	datas = append(datas, Data{ID: "2", Isbn: "454555", Title: "Data Two", Author: &Author{Firstname: "Steve", Lastname: "Smith"}})
 
 	// Route handles & endpoints
-	r.HandleFunc("/datas", getBooks).Methods("GET")
-	r.HandleFunc("/datas/{id}", getBook).Methods("GET")
-	r.HandleFunc("/datas", createBook).Methods("POST")
-	r.HandleFunc("/datas/{id}", updateBook).Methods("PUT")
-	r.HandleFunc("/datas/{id}", deleteBook).Methods("DELETE")
+	r.HandleFunc("/datas", getDatas).Methods("GET")
+	r.HandleFunc("/datas/{id}", getData).Methods("GET")
+	r.HandleFunc("/datas", createData).Methods("POST")
+	r.HandleFunc("/datas/{id}", updateData).Methods("PUT")
+	r.HandleFunc("/datas/{id}", deleteData).Methods("DELETE")
 
 	// Start server
 	log.Fatal(http.ListenAndServe(":8000", r))
