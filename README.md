@@ -40,15 +40,11 @@ POST localhost:8000/datas
 ### Update Data
 ``` bash
 PUT localhost:8000/datas/{id}
-
-# Request sample
-# {
-#   "isbn":"4545454",
-#   "title":"Updated Title",
-#   "author":{"firstname":"Sandra,  "lastname":"Mourali"}
-# }
-
 ```
-
-
+```json
+{
+  "isbn":"4545454",
+  "title":"Updated Title",
+  "author":{"firstname":"Sandra",  "lastname":"Mourali"}
+}
 ```
