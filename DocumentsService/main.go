@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"DocumentsService/document"
+	"DocumentsService/documents"
 	"github.com/gorilla/mux"
 )
 
@@ -11,6 +11,7 @@ func main() {
 	// Init router
 	r := mux.NewRouter()
 
+	// Initialize and setup routes for both services
 	document.Init()
 	document.SetupRoutes(r)
 

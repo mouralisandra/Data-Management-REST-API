@@ -56,21 +56,21 @@ echo "# Documents-Management-REST-API" >> README.md
 
 ### Get All Documentss
 ``` bash
-GET localhost:8000/documents
+GET localhost:7000/documents
 ```
 ### Get Single Documents
 ``` bash
-GET localhost:8000/documents/{id}
+GET localhost:7000/documents/{id}
 ```
 
 ### Delete Documents
 ``` bash
-DELETE localhost:8000/documents/{id}
+DELETE localhost:7000/documents/{id}
 ```
 
 ### Create Documents
 ``` bash
-POST localhost:8000/documents
+POST localhost:7000/documents
 ```
 ```json
 {

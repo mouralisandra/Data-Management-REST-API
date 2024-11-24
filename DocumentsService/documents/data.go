@@ -7,9 +7,9 @@ import (
 
 // Function to initialize the Document service (optional)
 func Init() {
-	// Pre-populating with some data
-	documents = append(documents, Document{ID: "1", Title: "Doc1", Author: "Sandra", Content: "Content of document 1"})
-	documents = append(documents, Document{ID: "2", Title: "Doc2", Author: "Nada", Content: "Content of document 2"})
+	// Pre-populating with some document
+	documents = append(documents, Document{ID: "1", Isbn: "438227", Title: "Document1", Author: &Author{Firstname: "Sandra", Lastname: "Mourali"}})
+	documents = append(documents, Document{ID: "2", Isbn: "454555", Title: "Document2", Author: &Author{Firstname: "Nada", Lastname: "Mankai"}})
 }
 
 // Function to setup routes for the Document service
