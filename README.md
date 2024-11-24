@@ -7,7 +7,8 @@
 
 ``` bash
 # Install mux router
-go get -u github.com/gorilla/mux
+go mod init projet
+go mod tidy
 ```
 
 ``` bash
