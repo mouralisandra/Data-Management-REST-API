@@ -32,8 +32,8 @@ POST localhost:8000/datas
 ```json
 {
   "isbn":"4545454",
-  "title":"Data Three",
-  "author":{"firstname":"Harry",  "lastname":"White"}
+  "title":"Data 3",
+  "author":{"firstname":"Sandra",  "lastname":"Mourali"}
 }
 ```
 
