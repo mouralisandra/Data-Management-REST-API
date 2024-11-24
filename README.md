@@ -1,6 +1,7 @@
 # Simple GO Lang REST API
 
-> Simple RESTful API to create, read, update and delete datas. No database implementation yet
+> Simple CRUD RESTful API for Urbanisation project
+![[architecturalView.png]]
 
 ## Quick Start
 
