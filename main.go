@@ -93,8 +93,8 @@ func main() {
 	r := mux.NewRouter()
 
 	// Hardcoded data - @todo: add database
-	datas = append(datas, Data{ID: "1", Isbn: "438227", Title: "Data One", Author: &Author{Firstname: "John", Lastname: "Doe"}})
-	datas = append(datas, Data{ID: "2", Isbn: "454555", Title: "Data Two", Author: &Author{Firstname: "Steve", Lastname: "Smith"}})
+	datas = append(datas, Data{ID: "1", Isbn: "438227", Title: "Data1", Author: &Author{Firstname: "Sandra", Lastname: "Mourali"}})
+	datas = append(datas, Data{ID: "2", Isbn: "454555", Title: "Data2", Author: &Author{Firstname: "Nada", Lastname: "Mankai"}})
 
 	// Route handles & endpoints
 	r.HandleFunc("/datas", getDatas).Methods("GET")
