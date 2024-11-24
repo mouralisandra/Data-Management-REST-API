@@ -9,8 +9,8 @@
 docker-compose up --build
 ```
 
-## Endpoints
-
+# Endpoints
+## Customer Data :
 ### Get All Datas
 ``` bash
 GET localhost:8000/datas
@@ -40,6 +40,47 @@ POST localhost:8000/datas
 ### Update Data
 ``` bash
 PUT localhost:8000/datas/{id}
+```
+```json
+{
+  "isbn":"4545454",
+  "title":"Updated Title",
+  "author":{"firstname":"Sandra",  "lastname":"Mourali"}
+}
+```
+## Documents :
+echo "# Documents-Management-REST-API" >> README.md
+## Endpoints
+
+### Get All Documentss
+``` bash
+GET localhost:8000/documents
+```
+### Get Single Documents
+``` bash
+GET localhost:8000/documents/{id}
+```
+
+### Delete Documents
+``` bash
+DELETE localhost:8000/documents/{id}
+```
+
+### Create Documents
+``` bash
+POST localhost:8000/documents
+```
+```json
+{
+  "isbn":"4545454",
+  "title":"Documents 3",
+  "author":{"firstname":"Sandra",  "lastname":"Mourali"}
+}
+```
+
+### Update Documents
+``` bash
+PUT localhost:8000/documents/{id}
 ```
 ```json
 {
