@@ -1,9 +1,19 @@
 version: '3.8'
 
 services:
-  app:
-    build: .
+  go-api:
+    build:
+      context: ./  # Build context is the current directory (root of the project)
+      dockerfile: api/Dockerfile  # Dockerfile inside the api folder
     ports:
       - "8000:8000"
     environment:
-      - GIN_MODE=release
+      - GO_ENV=production
+    volumes:
+      - ./api:/app  # Mount the api folder to /app inside the container
+    networks:
+      - go-api-network
+
+networks:
+  go-api-network:
+    driver: bridge
