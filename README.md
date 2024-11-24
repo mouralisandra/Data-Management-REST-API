@@ -45,7 +45,7 @@ PUT localhost:8000/datas/{id}
 # {
 #   "isbn":"4545454",
 #   "title":"Updated Title",
-#   "author":{"firstname":"Harry",  "lastname":"White"}
+#   "author":{"firstname":"Sandra,  "lastname":"Mourali"}
 # }
 
 ```
