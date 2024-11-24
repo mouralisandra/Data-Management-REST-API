@@ -21,29 +21,29 @@ go build
 ``` bash
 GET api/datas
 ```
-### Get Single Book
+### Get Single Data
 ``` bash
 GET api/datas/{id}
 ```
 
-### Delete Book
+### Delete Data
 ``` bash
 DELETE api/datas/{id}
 ```
 
-### Create Book
+### Create Data
 ``` bash
 POST api/datas
 
 # Request sample
 # {
 #   "isbn":"4545454",
-#   "title":"Book Three",
+#   "title":"Data Three",
 #   "author":{"firstname":"Harry",  "lastname":"White"}
 # }
 ```
 
-### Update Book
+### Update Data
 ``` bash
 PUT api/datas/{id}
 
