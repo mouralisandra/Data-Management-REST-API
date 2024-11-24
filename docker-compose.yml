@@ -3,7 +3,7 @@ version: '3.8'
 services:
   customer-data-service:
     build:
-      context: ./CustomerDataService  # Set the CustomerDataService directory as the build context
+      context: ./CustomerDataService 
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
@@ -14,10 +14,10 @@ services:
 
   documents-service:
     build:
-      context: ./DocumentsService  # Set the DocumentsService directory as the build context
+      context: ./DocumentsService 
       dockerfile: Dockerfile
     ports:
-      - "7000:7000"  # Ensure proper port mapping
+      - "7000:7000"  
     environment:
       - GO_ENV=production
     networks:
