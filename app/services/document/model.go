@@ -1,6 +1,5 @@
 package document
 
-// Document struct (Model)
 type Document struct {
 	ID        string `json:"id"`
 	Title     string `json:"title"`
