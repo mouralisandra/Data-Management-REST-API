@@ -6,35 +6,28 @@
 
 
 ``` bash
-# Install mux router
-go mod init projet
-go mod tidy
-```
-
-``` bash
-go build
-./go_restapi
+docker-compose up --build
 ```
 
 ## Endpoints
 
 ### Get All Datas
 ``` bash
-GET api/datas
+GET localhost:8000/datas
 ```
 ### Get Single Data
 ``` bash
-GET api/datas/{id}
+GET localhost:8000/datas/{id}
 ```
 
 ### Delete Data
 ``` bash
-DELETE api/datas/{id}
+DELETE localhost:8000/datas/{id}
 ```
 
 ### Create Data
 ``` bash
-POST api/datas
+POST localhost:8000/datas
 
 # Request sample
 # {
@@ -46,7 +39,7 @@ POST api/datas
 
 ### Update Data
 ``` bash
-PUT api/datas/{id}
+PUT localhost:8000/datas/{id}
 
 # Request sample
 # {
